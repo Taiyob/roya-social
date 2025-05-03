@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body style="font-family: 'Poppins', sans-serif">
+    <!-- Apply font to body -->
+
+    <main>
+      <div id="navbar"></div>
+      <div id="banner-container"></div>
+      <div id="service-container"></div>
+      <div id="video-engaging-clip-container"></div>
+      <div id="video-section-container"></div>
+      <div id="book-demo"></div>
+      <div id="client-stories-container"></div>
+      <div id="videos"></div>
+      <div id="faq"></div>
+      <div id="footer"></div>
+    </main>
+
+    <!-- <footer>
+      <p>&copy; 2025 Shopify Task. All rights reserved.</p>
+    </footer> -->
+    <script src="script.js"></script>
+    <script>
+      fetch("navbar.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("navbar").innerHTML = data;
+        })
+        .catch((err) => console.error("Error loading banner:", err));
+      fetch("banner.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("banner-container").innerHTML = data;
+        })
+        .catch((err) => console.error("Error loading banner:", err));
+
+      fetch("creative-service.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("service-container").innerHTML = data;
+        })
+        .catch((err) => console.error("Error loading creative service:", err));
+      fetch("video-engaging-clip.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("video-engaging-clip-container").innerHTML =
+            data;
+        })
+        .catch((err) => console.error("Error loading creative service:", err));
+      fetch("video-section.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("video-section-container").innerHTML = data;
+          const script = document.createElement("script");
+          script.src = "video-section.js";
+          document.body.appendChild(script);
+        })
+        .catch((err) => console.error("Error loading creative service:", err));
+      fetch("client-stories.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("client-stories-container").innerHTML = data;
+        })
+        .catch((err) => console.error("Error loading creative service:", err));
+      fetch("book-demo.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("book-demo").innerHTML = data;
+        })
+        .catch((err) => console.error("Error loading creative service:", err));
+      // fetch("videos.html")
+      //   .then((res) => res.text())
+      //   .then((data) => {
+      //     document.getElementById("videos").innerHTML = data;
+      //   })
+      //   .catch((err) => console.error("Error loading creative service:", err));
+      fetch("faq.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("faq").innerHTML = data;
+          const script = document.createElement("script");
+          script.src = "faq.js";
+          document.body.appendChild(script);
+        })
+        .catch((err) => console.error("Error loading creative service:", err));
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        })
+        .catch((err) => console.error("Error loading creative service:", err));
+    </script>
+  </body>
+</html>

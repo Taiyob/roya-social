@@ -1,0 +1,25 @@
+.custom-margin-book {
+  margin-top: 80px;
+}
+
+.booking-container {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  gap: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.booking-content h3 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.booking-content p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.booking-content button {
+  margin-top: 2rem;
+}
